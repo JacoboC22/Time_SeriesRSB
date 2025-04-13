@@ -34,11 +34,11 @@ close = data[, "MSFT.Close"]
 close
 autoplot(close)
 
-#Mirando la serie de tiempo podemos ver que hay un slight upwards trend, ademas de una seasonality fuerte presente que se repite alrededor de cada año
-#Los modelos que podemos usar para empezar a predecir son ARIMA (Haciendo diff para eliminar seasonality and trend o hacer un HW
+#Looking at the ts there's a slight upwards trend, and a strong seasonality happening.
+#We can use ARIMA and Holt winters
 
 #Creating Time series variable for Open column
-open_ts <- ts(data$MSFT.Open, start = c(2021, 1), frequency = 12)
+open_ts <- ts(data$MSFT.Open, start = c(2019, 1), frequency = 12)
 opendecomp <- decompose(open_ts)
 autoplot(opendecomp)
 
