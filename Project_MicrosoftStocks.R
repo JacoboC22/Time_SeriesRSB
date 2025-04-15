@@ -94,8 +94,8 @@ ses.test = ses(train, h = length(test))
 length(ses.test$mean)
 
 holt.test = holt(train, h =length(test))
-hw.add.test = hw(ts(train, frequency = 2), h =length(test), seasonal = "additive")
-hw.mult.test = hw(ts(train, frequency = 2), h =length(test), seasonal = "multiplicative")
+hw.add.test = hw(ts(train, frequency = 12), h =length(test), seasonal = "additive")
+hw.mult.test = hw(ts(train, frequency = 12), h =length(test), seasonal = "multiplicative")
 
 rmse.ses = rmse(test, ses.test$mean)
 rmse.holt = rmse(test, holt.test$mean)
