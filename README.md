@@ -89,6 +89,8 @@ This project analyzes MSFT's monthly stock data (2019-2024) to understand its tr
 
 ## Authors
 
+- The project was created by Jacobo Ceballos, Luis Felipe Navarro, Bryan Santiago Martinez and Maria Fernanda Gomez
+  
 ## License
 
 This project is for academic purposes only. Stock data is sourced from Yahoo Finance via the `quantmod` package and is subject to Yahoo Finance's terms of use.
