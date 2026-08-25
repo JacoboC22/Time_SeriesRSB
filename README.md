@@ -65,7 +65,7 @@ This project analyzes MSFT's monthly stock data (2019-2024) to understand its tr
 
 1. Clone the repository:
    ```bash
-   git clone <URL_DEL_REPO>
+   git clone https://github.com/JacoboC22/Time_SeriesRSB.git
    cd microsoft-stock-forecasting
    ```
 
