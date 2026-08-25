@@ -1,12 +1,12 @@
-# 📈 Microsoft Stock Price Forecasting
+# Microsoft Stock Price Forecasting
 
 Time series analysis and forecasting of Microsoft (MSFT) stock prices using classical statistical models in R, comparing exponential smoothing methods against ARIMA to identify the best-performing forecasting approach. This project is part of the Time Series Analysis course - MSc Data Analytics at Rennes School of Business - France
 
-## 📌 Project Overview
+## Project Overview
 
 This project analyzes MSFT's monthly stock data (2019-2024) to understand its trend and seasonality, then builds and compares multiple **time series forecasting models** to predict future closing prices. The goal is not just to visualize stock behavior, but to rigorously evaluate which forecasting technique generalizes best on unseen (test) data using RMSE as the comparison metric.
 
-## 🎯 Objectives
+## Objectives
 
 - Retrieve and explore historical MSFT stock data (Open, High, Low, Close, Volume).
 - Decompose the closing price series to identify trend and seasonal components.
@@ -14,7 +14,7 @@ This project analyzes MSFT's monthly stock data (2019-2024) to understand its tr
 - Fit an **ARIMA model** (auto-selected) as a benchmark against exponential smoothing methods.
 - Evaluate all models with a train/test split and **RMSE**, and determine the best-performing model.
 
-## 📊 Dataset
+## Dataset
 
 - **Source:** Yahoo Finance, retrieved via the `quantmod` package (`getSymbols`).
 - **Ticker:** MSFT (Microsoft Corporation).
@@ -22,7 +22,7 @@ This project analyzes MSFT's monthly stock data (2019-2024) to understand its tr
 - **Frequency:** Monthly (72 observations).
 - **Fields used:** Open, High, Low, Close, Volume.
 
-## 🔍 Analysis & Methodology
+## Analysis & Methodology
 
 1. **Data Retrieval & Exploration**
    - Pulled MSFT historical prices directly from Yahoo Finance with `quantmod::getSymbols`.
@@ -47,21 +47,21 @@ This project analyzes MSFT's monthly stock data (2019-2024) to understand its tr
    - Calculated **RMSE** for SES, Holt, HW-Additive, HW-Multiplicative, and ARIMA on the test set.
    - Built a comparison table and automatically selected the method with the lowest RMSE as the best forecasting model.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Language:** R
 - **Data source:** `quantmod` (Yahoo Finance API)
 - **Time series & forecasting:** `forecast` (ses, holt, hw, auto.arima, decompose)
 - **Model evaluation:** `Metrics` (rmse)
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 ├── Project_MicrosoftStocks.R   # Full analysis: data retrieval, decomposition, forecasting, evaluation
 └── README.md
 ```
 
-## 🚀 How to Run
+## How to Run
 
 1. Clone the repository:
    ```bash
@@ -81,12 +81,12 @@ This project analyzes MSFT's monthly stock data (2019-2024) to understand its tr
 
    > Note: `getSymbols()` requires an internet connection to fetch data from Yahoo Finance.
 
-## 📈 Key Insights
+## Key Insights
 
 - MSFT's closing price shows a **clear upward trend** over 2019-2024, with recurring seasonal fluctuations.
 - Multiple forecasting methods (SES, Holt, Holt-Winters, ARIMA) were benchmarked head-to-head instead of relying on a single technique.
 - Model comparison via **RMSE on a held-out test set** determined which method — exponential smoothing or ARIMA — best predicts MSFT's future price behavior, avoiding overfitting by validating on unseen data.
 
-## 📄 License
+## License
 
 This project is for academic purposes only. Stock data is sourced from Yahoo Finance via the `quantmod` package and is subject to Yahoo Finance's terms of use.
