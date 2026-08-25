@@ -87,6 +87,8 @@ This project analyzes MSFT's monthly stock data (2019-2024) to understand its tr
 - Multiple forecasting methods (SES, Holt, Holt-Winters, ARIMA) were benchmarked head-to-head instead of relying on a single technique.
 - Model comparison via **RMSE on a held-out test set** determined which method — exponential smoothing or ARIMA — best predicts MSFT's future price behavior, avoiding overfitting by validating on unseen data.
 
+## Authors
+
 ## License
 
 This project is for academic purposes only. Stock data is sourced from Yahoo Finance via the `quantmod` package and is subject to Yahoo Finance's terms of use.
